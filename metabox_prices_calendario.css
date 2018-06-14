@@ -1,0 +1,110 @@
+.cControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#calendar {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-bottom: -5px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#calendar * {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#calendar > div.monthContainer {
+  width: calc(25% - 5px);
+  margin-right: 5px;
+  margin-bottom: 5px;
+  min-width: 190px;
+  flex-grow: 1;
+}
+#calendar > div.monthContainer table.calendar {
+  font-size: 10px;
+  color: white;
+  border-collapse: separate;
+  empty-cells: show;
+  background-color: #555;
+  width: 100%;
+}
+#calendar > div.monthContainer table.calendar td,
+#calendar > div.monthContainer table.calendar th {
+  border: 1px solid transparent;
+  padding: 4px;
+  text-align: center;
+  vertical-align: middle;
+}
+#calendar > div.monthContainer table.calendar td:not(.days):not(.empty),
+#calendar > div.monthContainer table.calendar th:not(.days):not(.empty) {
+  cursor: pointer;
+}
+#calendar > div.monthContainer table.calendar td.filled:hover {
+  background-color: green;
+}
+#calendar > div.monthContainer table.calendar td.filled:active {
+  background-color: rgba(255,255,255,0.5);
+}
+#calendar > div.monthContainer table.calendar td[data-price]:not([data-price=""]) {
+  background-color: yellow;
+  color: black;
+}
+#calendar > div.monthContainer table.calendar td.filled[data-price]:not([data-price=""]).chosen {
+  border: 1px solid white;
+}
+#calendar > div.monthContainer table.calendar td.filled.chosen {
+  background-color: green;
+}
+#calendar > div.monthContainer table.calendar th.month:hover {
+  background-color: green;
+}
+#calendar > div.monthContainer table.calendar th.month:active {
+  background-color: rgba(255,255,255,0.5);
+}
+#calendar > div.monthContainer table.calendar th.month {
+  text-transform: capitalize;
+}
+#istruzioni {
+  background-color: #555;
+  padding: 10px 10px 0 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+#istruzioni p {
+  margin: 0 0 10px 0;
+}
+#istruzioni span.square {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  border: 1px solid transparent;
+}
+#istruzioni span.square.selected {
+  background-color: yellow;
+}
+#istruzioni span.square.chosen {
+  background-color: green;
+}
+#istruzioni span.square.selected.chosen {
+  background-color: green;
+  border: 1px solid white;
+}
